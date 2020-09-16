@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Dimensions,StyleSheet, Text, View } from 'react-native';
 import Relogio from './Relogio.js';
 import Crone from './Crono'
 
@@ -9,7 +9,7 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.relog}>
         <View style={styles.tela}>
-          <Text style={styles.texto}><Relogio /></Text>
+          <Relogio />
         </View>
         <View>
           <Crone />
@@ -30,11 +30,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   relog: {
-    width:'20%',
-    height:'40%',
+    borderRadius: (Math.round(Dimensions.get('window').width + Dimensions.get('window').height) *0.50),
+    width: '65%',
+    height: '40%',
     borderColor: '#00ced1',
     borderWidth: 1,
-    borderRadius: '50%',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -42,8 +42,8 @@ const styles = StyleSheet.create({
     paddingTop:'20%',
   },
   base:{
-    width:'18%',
-    height:'5%',
+    width: Dimensions.get('window').width * 0.40,
+    height: Dimensions.get('window').height * 0.05,
     borderColor: '#00ced1',
     borderWidth: 1,
   },

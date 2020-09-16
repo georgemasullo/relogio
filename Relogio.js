@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 class Relogio extends React.Component {
     constructor(props) {
       super(props);
@@ -22,10 +23,18 @@ class Relogio extends React.Component {
     }
     render() {
       return (
-        <p className="App-clock">
-          {this.state.hora}
-        </p>
+        <Text style={styles.texto}> {this.state.hora}</Text>
       );
     }
   }
   export default Relogio;
+
+  const styles = StyleSheet.create({
+    texto:{
+      color:"#00ced1",
+      paddingHorizontal:'10%',
+      borderColor: '#fff',
+      borderWidth: 1,
+    }
+  });
+  

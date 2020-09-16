@@ -1,5 +1,5 @@
 import React,{ Component ,useState} from 'react';
-import { Text, View, TextInput,TouchableOpacity, StyleSheet  } from 'react-native';
+import { Dimensions,Text, View, TextInput,TouchableOpacity, StyleSheet  } from 'react-native';
 
 
 
@@ -74,10 +74,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     area:{
+        width: Dimensions.get('window').width * 0.60,
         paddingLeft:'10%',
         paddingRight:'10%',
         paddingTop:'10%',
-        width:'90%',
         flexDirection:'row',
         alignContent:'space-between',
         justifyContent: 'space-between',
@@ -86,6 +86,7 @@ const styles = StyleSheet.create({
         borderColor: '#00ced1',
         borderWidth: 1,
         width:'15%',
+        height:'50%',
         color:"#00ced1",
         textAlign:'center'
     },
